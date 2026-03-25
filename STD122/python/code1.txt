@@ -1,0 +1,26 @@
+continue_loop = True
+while continue_loop:
+    score_str = input("inpt your score = ")
+    try:
+        score = float(score_str)
+    except ValueError:
+        print("Unknown")
+        continue
+    G = "your grade is --> "
+    if score >= 80:
+        print(G + 'A')
+    elif score >= 70:
+        print(G + 'B')
+    elif score >= 60:
+        print(G + 'C')
+    elif score >= 50:
+        print(G + 'D')
+    elif score < 50:
+        print(G + 'F')
+    confirmed_input = input("ต้องการวนซ้ำหรือไม่ (Yes/No): ")
+    if confirmed_input.lower() == 'no' :
+        continue_loop = False
+    elif confirmed_input.lower() == 'yes' :
+        continue_loop = True
+    else:
+         print('Unknown')
